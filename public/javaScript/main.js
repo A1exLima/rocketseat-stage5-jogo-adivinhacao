@@ -19,19 +19,23 @@ function handleTryClick(event) {
 
   const inputGuess = document.querySelector("#guess")
 
-  if (inputGuess.value > 10 || inputGuess.value < 0) {
+  if (inputGuess.value > 10 || inputGuess.value < 0) { //Options Gap Validation
 
     alert("⚠️  Escolha um número entre 0 e 10  ⚠️")
-  }
+    --xAttempts
 
-    if (Number(inputGuess.value) == randomNumber) {
+  } else if (Number(inputGuess.value) == randomNumber) {
       toggleScreen() //screen change
 
       document.querySelector(
         ".screen2 h1"
       ).innerText = `Acertou em ${xAttempts} tentativas`
     }
-  xAttempts++
+  
+  if(inputGuess.value != ""){ // If input has a value, it increments the number of attempts, otherwise it does not increment
+    xAttempts++
+  }
+
   inputGuess.value = "" //reset input
 }
 
@@ -50,6 +54,6 @@ function toggleScreen() {
 
 function changeScreenByEnter(event) {
   if (event.key == "Enter" && screen1.classList.contains("hide")) {
-    toggleScreen()
+    reloadGame(event)
   }
 }
