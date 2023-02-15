@@ -1,0 +1,133 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  font-size: 62.5%; /* 10px */
+}
+
+body {
+  font-size: 1.6rem;
+  background-color: #121214;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  font-family: "Roboto Flex", sans-serif;
+}
+
+.hide {
+ display: none; 
+}
+
+.container {
+  margin-top: -10rem;
+  width: min(65rem, 70%);
+  height: 35rem;
+  background-color: #202024;
+  border-radius: 1.5rem;
+  box-shadow: -0.1rem -0.02rem 1.2rem #575783a3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  animation-name: cont-Animation;
+  animation-duration: 2s;
+}
+
+@keyframes cont-Animation {
+  0% {
+    opacity: 0;
+    transform: translateY(-10rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* screen1 */
+
+.container h1 {
+  text-align: center;
+  margin-bottom: 3rem;
+  color: #e1e1e6;
+  font-size: clamp(1.9rem, 0.5rem + 5vw, 4.5rem);
+  font-weight: 600;
+}
+
+.container p:nth-child(2) {
+  color: #e1e1e6;
+  font-size: clamp(1.35rem, 0.03rem + 3vw, 2.5rem);
+  font-weight: bolder;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+#my-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.number-guess {
+  text-align: center;
+  border: none;
+  border-radius: 0.5rem 0 0 0.5rem;
+  font-size: clamp(1.9rem, 0.03rem + 3vw, 2.5rem);
+  font-weight: bolder;
+  height: 4.5rem;
+  width: 6.1rem;
+  padding: 0.5rem;
+  background-color: #04d361a7;
+  color: #e1e1e6;
+  outline: none;
+}
+
+.button-try {
+  color: #e1e1e6;
+  height: 4.5rem;
+  width: 12rem;
+  border-radius: 0 0.5rem 0.5rem 0;
+  border: none;
+  font-size: clamp(1.9rem, 0.03rem + 3vw, 2.2rem);
+  font-weight: bolder;
+  font-family: "Roboto Flex", sans-serif;
+  background-color: #7c56d4bc;
+  cursor: pointer;
+  transition: all 700ms;
+}
+
+.button-try:hover{
+  filter: brightness(0.75);
+}
+
+/* screen2 */
+.screen2 {
+  text-align: center;
+}
+
+.screen2 h1 {
+  font-size: clamp(1.9rem, 0.5rem + 5vw, 4rem);
+  padding: 1rem;
+}
+
+.button-again {
+  color: #e1e1e6;
+  height: 4.5rem;
+  width: min(20rem, 47%);
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  border: none;
+  font-size: clamp(1.5rem, 0.03rem + 3vw, 2.2rem);
+  font-weight: bolder;
+  font-family: "Roboto Flex", sans-serif;
+  background-color: #7c56d4bc;
+  cursor: pointer;
+  transition: all 700ms;
+}
+
+.button-again:hover{
+  filter: brightness(0.75);
+}

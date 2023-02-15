@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <title>Jogo Adivinhação</title>
+    <link rel="stylesheet" href="./public/styles/style.css" />
+    <link
+      rel="shortcut icon"
+      sizes="32x32"
+      href="./public/images/icon/favicon.svg"
+      type="image/svg"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,300;8..144,600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main class="container">
+      <div class="screen1">
+        <h1>Jogo da Adivinhação</h1>
+        <p>Adivinhe um número entre 0 e 10</p>
+        <form id="my-form" action="">
+          <input
+            class="number-guess"
+            type="number"
+            id="guess"
+            name="guess"
+            autofocus
+          />
+          <button type="submit" class="button-try">Tentar</button>
+        </form>
+      </div>
+      <div class="screen2 hide">
+        <h1>Error: Please reload Game</h1>
+        <button type="button" class="button-again">Jogar Novamente</button>
+      </div>
+    </main>
+    <script src="./public/javaScript/main.js"></script>
+  </body>
+</html>
