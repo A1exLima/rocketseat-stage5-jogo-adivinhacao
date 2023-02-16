@@ -47,7 +47,10 @@ function handleTryClick(event) {
   } else {
     let randomArrayMessage = Math.round(Math.random() * 10)
 
-    tentativeMessage.innerText = arrayMessage[randomArrayMessage]
+    if (inputGuess.value != ""){
+      tentativeMessage.innerText = arrayMessage[randomArrayMessage]
+    }
+      
   }
 
   if (inputGuess.value != "") {
