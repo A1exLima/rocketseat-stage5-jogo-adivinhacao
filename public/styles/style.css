@@ -103,6 +103,15 @@ body {
   filter: brightness(0.75);
 }
 
+.tentative-message{
+  width: 100%;
+  text-align: center;
+  color: #e1e1e6;
+  font-size: clamp(1.35rem, 0.03rem + 3vw, 1.9rem);
+  font-weight: bolder;
+  padding-top: 2rem;
+}
+
 /* screen2 */
 .screen2 {
   text-align: center;
