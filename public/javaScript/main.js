@@ -43,7 +43,7 @@ function handleTryClick(event) {
 
     document.querySelector(
       ".screen2 h1"
-    ).innerText = `Acertou em ${xAttempts} tentativas`
+    ).innerText = `Acertou em ${xAttempts} tentativas 🥳`
   } else {
     let randomArrayMessage = Math.round(Math.random() * 10)
 
