@@ -48,14 +48,17 @@ function handleTryClick(event) {
     let randomArrayMessage = Math.round(Math.random() * 10)
 
     if (inputGuess.value != ""){
+
       tentativeMessage.innerText = arrayMessage[randomArrayMessage]
-    }
       
+      // If input has a value, it increments the number of attempts, otherwise it does not increment
+      xAttempts++
+
+    }
   }
 
-  if (inputGuess.value != "") {
-    // If input has a value, it increments the number of attempts, otherwise it does not increment
-    xAttempts++
+  if (inputGuess.value == "") {
+    tentativeMessage.innerText = "Insira um valor 🤖"
   }
 
   inputGuess.value = "" //reset input
